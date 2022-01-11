@@ -12,6 +12,25 @@
     <h1>This is the keyboards page</h1>
     <a href="/<%= user._id %>/keyboards/new" class="brand-logo left">Create Custom Keyboard</a>
 
-   
+    <% if (Keyboard.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Test</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% Keyboard.forEach(function(k) { %>
+                <tr>
+                    <td><%= k.size %></td>
+                    <td><%= k.keyboardType %></td>
+                  </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No Keyboard Builds Found</h5>
+      <% } %>
+
 </body>
 </html>

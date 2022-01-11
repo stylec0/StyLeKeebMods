@@ -1,4 +1,4 @@
-const Movie = require('../models/keyboards');
+const Keyboard = require('../models/keyboards');
 
 module.exports = {
 	create 
@@ -15,7 +15,7 @@ function create(req, res){
 	Keyboard.findById(req.params.id, function(err, keyboardDocument){
 
 		// Then we need to add the review to the movie.reviews array
-		keyboardDocument.keyboards.push(req.body);
+		keyboardDocument.specs.push(req.body);
 		// The above is mutating a document
 		// The Database (mongodb) doesn't know we mutated
 		// the document
@@ -27,7 +27,7 @@ function create(req, res){
 			// res.redirect(`/movies/${movieDocument._id}`)
             res.redirect(`/${keyboardDocument._id}/keyboards`);
 
-        keyboardDocument.save(function (err) {
+        // keyboardDocument.save(function (err) {
         console.log("Controllers/Keyboards, create function")
         console.log(req.body, "<---req.body")
         console.log(req.params, " < -req.params in the create function")
@@ -35,5 +35,5 @@ function create(req, res){
         res.redirect(`/${keyboardDocument._id}/keyboards`);
 		})
 	})
-    })
+    // })
 }
