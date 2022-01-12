@@ -11,12 +11,12 @@ module.exports = {
   function index (req, res) {
     console.log("Controllers/Keyboards, index function")
     console.log(req.params, " < -req.params in the index route")
-    Keyboard.find({}, function(err, keyboardDocuments) {
-        res.render('users/keyboards', {
-            title: 'Keyboards',
-            keyboards: keyboardDocuments
-        })
-    })
+    // Keyboard.find({}, function(err, keyboardDocuments) {
+        res.render('users/keyboards')
+            // title: 'Keyboards',
+            // keyboards: keyboardDocuments
+        // })
+    // })
   }
   
 

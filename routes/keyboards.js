@@ -1,14 +1,12 @@
-var router = require('express').Router();
-const keyboardsCtrl = require('../controllers/keyboards');
-const switchesCtrl = require('../controllers/switches');
+var express = require('express');
+var router = express.Router();
+const keyboardsCtrl = require('../controllers/keyboards')
 
-// keyboardCtrl routes
-router.get('/:id/keyboards', keyboardsCtrl.index)
-router.get('/:id/keyboards/show', keyboardsCtrl.show)
-router.post('/:id/keyboards', keyboardsCtrl.create)
-router.get('/:id/keyboards/new', keyboardsCtrl.new) // <--function new Keyboard in keyboard controllers
-router.get('/:id/keyboards/switches', switchesCtrl.index)
-router.post('/:id/keyboards/switches', switchesCtrl.create)
+/* GET users listing. */
+
+router.get('/', keyboardsCtrl.index);
+router.get('/new', keyboardsCtrl.new);
+router.get('/:id', keyboardsCtrl.show);
+router.post('/', keyboardsCtrl.create)
 
 module.exports = router;
-

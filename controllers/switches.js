@@ -11,13 +11,13 @@ function index(req, res) {
     res.render('keyboards/switches')
 }
 
-function create(req, res) {
+// function create(req, res) {
    
-    Keyboard.findById(req.params.id, function (err, keyboardDocument) {
-      req.body.keyboard = keyboardDocument._id
-    Switch.create(req.body, function (err, switch) {
+//     Keyboard.findById(req.params.id, function (err, keyboardDocument) {
+//       req.body.keyboard = keyboardDocument._id
+//     Switch.create(req.body, function (err, switch) {
       
-    console.log("ticket function is working")
-        res.redirect(`/${keyboardDocument._id}/keyboards`); 
-    })
-})
+//     console.log("ticket function is working")
+//         res.redirect(`/${keyboardDocument._id}/keyboards`); 
+//     })
+// })
