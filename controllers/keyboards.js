@@ -1,5 +1,6 @@
 const Keyboard = require('../models/keyboard'); 
 
+
 module.exports = {
     index,
     create,
@@ -25,7 +26,7 @@ function show (req, res) {
 
     Keyboard.findById(req.params.id, function(err, keyboardDocument){
         res.render('keyboards/show', {
-             title: 'Flight Details', 
+             title: 'Test function show', 
              keyboards: keyboardDocument });
             // Users: keyboardDocuments,
         console.log(keyboardDocument, "<---Keyboard Document")

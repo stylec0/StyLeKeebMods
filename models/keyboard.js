@@ -15,8 +15,8 @@ const keyboardSchema = new mongoose.Schema ({
             type: String,
             enum: ["Tofu", "NovelKeys", "Drop", "Epomaker"],
             required: true,
-}
-
+},
+        switches: {type: mongoose.Schema.Types.ObjectId, ref: 'Switch'}, 
 })
 
 

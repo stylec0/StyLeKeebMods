@@ -17,4 +17,4 @@ const switchSchema = new mongoose.Schema ({
 },
 });
 
-module.exports = mongoose.model('Switches', switchSchema);
+module.exports = mongoose.model('Switch', switchSchema);
