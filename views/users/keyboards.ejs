@@ -10,27 +10,29 @@
 </head>
 <body>
     <h1>This is the keyboards page</h1>
-    <a href="/<%= user._id %>/keyboards/new" class="brand-logo left">Create Custom Keyboard</a>
+    
 
-    <% if (Keyboard.length) { %>
-        <table>
-          <thead>
-            <tr>
-              <th>Test</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% Keyboard.forEach(function(k) { %>
-                <tr>
-                    <td><%= k.size %></td>
-                    <td><%= k.keyboardType %></td>
-                  </tr>
-            <% }); %>
-          </tbody>
-        </table>
-      <% } else { %>
-        <h5>No Keyboard Builds Found</h5>
-      <% } %>
+    <table id="list">
+        <thead>
+          <tr>
+            <th>Build Name</th>
+            <th>Details</th>
+            <th><a href="/<%= user._id %>/keyboards/new" class="brand-logo left">Create Custom Keyboard</a></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+    <% keyboards.forEach(function(k) { %>
+        <tr>
+            <td><%= k.name %></td>
+            <td><a href="/<%= k._id %>/keyboards/show">Edit/Config</a></td>
+          </tr>
+    <% }); %>
+
+ 
+  </tbody>
+</table>
+
 
 </body>
 </html>

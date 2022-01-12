@@ -11,19 +11,26 @@ module.exports = {
     console.log("Controllers/Keyboards, index function")
     console.log(req.params, " < -req.params in the index route")
     Keyboard.find({}, function(err, keyboardDocuments) {
-        res.render('users/keyboards')
+        res.render('users/keyboards', {
+            title: 'Keyboards',
+            keyboards: keyboardDocuments
+        })
     })
-};  
+  }
+  
 
 function show (req, res) {
-
+    console.log(" < Controller/keyboards, show function")
     console.log(req.params, " < -req.params in the show route")
 
-    // Keyboard.findById(req.params.id, function(err, keyboardDocument){
-    //     res.render('users/keyboards', { title: 'Flight Details', keyboard: keyboardDocument });
-    //         // Users: keyboardDocuments,
+    Keyboard.findById(req.params.id, function(err, keyboardDocument){
+        res.render('keyboards/show', {
+             title: 'Flight Details', 
+             keyboards: keyboardDocument });
+            // Users: keyboardDocuments,
+        console.log(keyboardDocument, "<---Keyboard Document")
           
-    //     })
+        })
 }
 
 function create (req, res) {
