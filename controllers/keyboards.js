@@ -24,14 +24,14 @@ function show (req, res) {
     console.log(" < Controller/keyboards, show function")
     console.log(req.params, " < -req.params in the show route")
 
-    Keyboard.findById(req.params.id, function(err, keyboardDocument){
+    // Keyboard.findById(req.params.id, function(err, keyboardDocument){
         res.render('keyboards/show'), {}
             //  title: 'Test function show', 
             //  keyboards: keyboardDocument });
             // Users: keyboardDocuments,
-        console.log(keyboardDocument, "<---Keyboard Document")
+        // console.log(keyboardDocument, "<---Keyboard Document")
           
-        })
+        // })
 }
 
 // function create (req, res) {
