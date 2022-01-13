@@ -2,10 +2,10 @@ const mongoose = require('mongoose');
 
 const commentSchema = new mongoose.Schema ({
     user: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
-    userName: {
-        type: String,
-        required: true,
-    },
+    // userName: {
+    //     type: String,
+    //     required: true,
+    // },
     content: String,
     },
 {
@@ -38,10 +38,10 @@ const keyboardSchema = new mongoose.Schema ({
             enum: ["Reds", "Yellows", "Blacks", "Blues"],
             required: true,
 },
-        switchLube: {
-            type: Boolean,
-            required: true,
-},
+//         switchLube: {
+//             type: Boolean,
+//             required: true,
+// },
 
     comments: [commentSchema]
 

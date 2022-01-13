@@ -6,6 +6,7 @@ module.exports = {
     create,
     new: newKeyboard,
     show,
+    edit,
   };
 
   function index (req, res) {
@@ -16,12 +17,13 @@ module.exports = {
             title: 'Keyboards',
             keyboards: keyboardDocuments
         })
+        console.log(keyboardDocuments)
     })
   }
   
 
   function show (req, res) {
-    console.log(" < Controller/keyboards, show function")
+    console.log(" <--Controller/keyboards, show function")
     console.log(req.params, " < -req.params in the show route")
 
     Keyboard.findById(req.params.id, function(err, keyboardDocument){
@@ -51,4 +53,14 @@ function create (req, res) {
 function newKeyboard (req, res) {
     console.log("Controller/Keyboards, newKeyboard function")
     res.render ('keyboards/new',);
+}
+
+function edit(req,res) {
+    console.log("Controller/Keyboards, edit function",)
+    Keyboard.findById(req.params.id, function(err, keyboardDocument){
+        console.log(keyboardDocument, "<---this is KeyboardDocument")
+        res.render('keyboards/details', {
+             title: 'Test function show', 
+             keyboards: keyboardDocument });
+    })
 }

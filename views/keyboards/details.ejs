@@ -1,0 +1,94 @@
+<%- include('../partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the Details Page</h1>
+
+    <table id="list">
+        <thead>
+            <tr>
+                <th><div>Keyboard Build </div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div><%= keyboards.name %></div></td>
+            </tr>
+    </thead>
+
+    
+    <table id="list">
+        <thead>
+            <tr>
+                <th><div>Keyboard Model: </div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><div><%= keyboards.keyboardModel %></div></td>
+            </tr>
+    </thead>
+    <br><br>
+    <table id="list">
+        <thead>
+            <tr>
+                <th><div>Keyboard Size: </div></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> <div><%= keyboards.size %></div></td>
+            </tr>
+    </thead>
+    <br><br>
+</table>
+<br><br>
+<table id="list">
+    <thead>
+        <tr>
+            <th><div>Switch Type: </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <div><%= keyboards.switchType %></div></td>
+        </tr>
+</thead>
+<br><br>
+</table>
+<br><br>
+<table id="list">
+    <thead>
+        <tr>
+            <th><div>Switch Color: </div></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> <div><%= keyboards.switchColor %></div></td>
+        </tr>
+</thead>
+<br><br>
+</table>
+
+<br><br>
+<h2>Comments</h2>
+<form id="add-comment-form" method="POST" action="/<%= keyboards._id %>/keyboards/details">
+
+  <textarea name="content"></textarea>
+  
+  <input type="submit" value="Add Comment">
+</form>
+
+
+  
+
+</body>
+</html>
