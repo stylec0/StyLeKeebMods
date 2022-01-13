@@ -100,6 +100,10 @@
           <tr>
             <td><%= c.createdAt.toLocaleDateString() %></td>
             <td><%= c.content %></td>
+    <form action="/<%= comments._id %>?_method=DELETE"
+        class="delete-form" method="POST">
+        <button type="submit">Delete Comment</button>
+      </form>
           </tr>
         <% }); %>
         <tr>
