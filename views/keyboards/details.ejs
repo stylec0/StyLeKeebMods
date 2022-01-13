@@ -87,7 +87,28 @@
   <input type="submit" value="Add Comment">
 </form>
 
-
+<% if (keyboards.comments.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Created at</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% keyboards.comments.forEach(function(c) { %>
+          <tr>
+            <td><%= c.createdAt.toLocaleDateString() %></td>
+            <td><%= c.content %></td>
+          </tr>
+        <% }); %>
+        <tr>
+        </tr>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Reviews Yet</h5>
+  <% } %>
   
 
 </body>

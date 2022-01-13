@@ -1,4 +1,3 @@
-const Comment = require('../models/comment');
 const Keyboard = require('../models/keyboard'); 
 
 module.exports = {
