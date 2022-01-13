@@ -100,7 +100,7 @@
           <tr>
             <td><%= c.createdAt.toLocaleDateString() %></td>
             <td><%= c.content %></td>
-            <td><form action="/<%= keyboards._id %>" ?_method=DELETE
+            <td><form action="/<%= c._id %>?_method=DELETE"
         class="delete-form" method="POST">
         <button type="submit">Delete Comment</button>
       </form></td>
