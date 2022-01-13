@@ -8,18 +8,13 @@ const commentsCtrl = require('../controllers/comments');
 // router.get('/', keyboardsCtrl.index);
 // router.get('/new', keyboardsCtrl.new);
 router.get('/:id', keyboardsCtrl.show);
-router.get('/:id/keyboards/details', keyboardsCtrl.edit); // <--Edit button function
-router.get('/:id/keyboards/new', keyboardsCtrl.new); ///<---create keyboard button
-router.get('/:id/keyboards', keyboardsCtrl.index); // <---My keyboards NAV BUtton
-router.post('/:id/keyboards', keyboardsCtrl.create); /// <---add keyboard button in create
+router.get('/keyboards/:id/details', keyboardsCtrl.edit); // <--Edit button function
+router.get('/keyboards/:id/new', keyboardsCtrl.new); ///<---create keyboard button
+router.get('/keyboards/:id', keyboardsCtrl.index); // <---My keyboards NAV BUtton
+router.post('/keyboards/:id', keyboardsCtrl.create); /// <---add keyboard button in create
 // router.post('/:id/keyboards/details', commentsCtrl.create); //<-- add comment button
 
 
 module.exports = router;
 
 
-// router.get('/:id', keyboardsCtrl.show);
-// router.get('/:id/keyboards/details', keyboardsCtrl.edit); // <--Edit button function
-// router.get('/:id/keyboards/new', keyboardsCtrl.new); ///<---create keyboard button
-// router.get('/:id/keyboards', keyboardsCtrl.index); // <---My keyboards NAV BUtton
-// router.post('/:id/keyboards', keyboardsCtrl.create); /// <---add keyboard button in create

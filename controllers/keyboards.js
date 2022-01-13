@@ -44,7 +44,7 @@ function create (req, res) {
 
 		// after the db responds
 		//then we respond to the client (aka the browser)
-		res.redirect(`/${keyboardDocument._id}/keyboards`); // < tells the client make a get request to '/movies'
+		res.redirect(`/keyboards/${keyboardDocument._id}`); // < tells the client make a get request to '/movies'
 	})
 }
 

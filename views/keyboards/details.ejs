@@ -80,7 +80,7 @@
 
 <br><br>
 <h2>Comments</h2>
-<form id="add-comment-form" method="POST" action="/<%= keyboards._id %>/keyboards/details">
+<form id="add-comment-form" method="POST" action="/keyboards/<%= keyboards._id %>/details">
 
   <textarea name="content"></textarea>
   
@@ -100,7 +100,7 @@
           <tr>
             <td><%= c.createdAt.toLocaleDateString() %></td>
             <td><%= c.content %></td>
-            <td><form action="/<%= keyboards._id %>/keyboards/<%= c._id %>/details?_method=DELETE"
+            <td><form action="/details/<%= c._id %>?_method=DELETE"
         class="delete-form" method="POST">
         <button type="submit">Delete Comment</button>
       </form></td>

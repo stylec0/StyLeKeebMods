@@ -11,7 +11,7 @@
    <nav>
         <% if (user) { %>
             <a href="/logout"><i class="material-icons left"></i>Log Out</a>
-            <a href="/<%= user._id %>/keyboards/" class="brand-logo left">My Keyboards</a>
+            <a href="/keyboards/<%= user._id %>" class="brand-logo left">My Keyboards</a>
         <% } else { %>
             <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
         <% } %>

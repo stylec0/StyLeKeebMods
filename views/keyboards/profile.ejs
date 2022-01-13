@@ -15,7 +15,7 @@
           <tr>
             <th>Build Name</th>
             <th>Details</th>
-            <th><a href="/<%= user._id %>/keyboards/new" class="brand-logo left">Create Custom Keyboard</a></th>
+            <th><a href="/keyboards/<%= user._id %>/new" class="brand-logo left">Create Custom Keyboard</a></th>
             <th></th>
           </tr>
         </thead>
@@ -23,7 +23,7 @@
     <% keyboards.forEach(function(k) { %>
         <tr>
             <td><%= k.name %></td>
-            <td><a href="/<%= k._id %>/keyboards/details">Details/Edit/Comments</a></td>
+            <td><a href="/keyboards/<%= k._id %>/details">Details/Edit/Comments</a></td>
           </tr>
     <% }); %>
 
