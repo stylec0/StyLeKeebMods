@@ -31,10 +31,13 @@ function create(req, res){
 function deleteComment (req, res) {
     console.log("Controller/commments, Delete function")
     console.log(req.params.id)
-    Keyboard.deleteOne(req.params.id);
-    // Keyboard.findByIdAndRemove(req.params.id, function(err) {
-        res.redirect(`/${keyboardDocument._id}/keyboards/details`)
-    }  
+    Keyboard.findById(req.params.id, function(err, keyboardDocument){
+        keyboardDocument.comments.pull({_id: req.params.commentsid});
+        keyboardDocument.save(function(err){
+            res.redirect(`/${keyboardDocument._id}/keyboards/details`)
+        })
+    })
+}
 
     // function deleteComment (req, res){
     //     console.log("Controllers/comments, Delete function")
