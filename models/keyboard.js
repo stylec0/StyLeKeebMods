@@ -37,13 +37,7 @@ const keyboardSchema = new mongoose.Schema ({
             enum: ["Reds", "Yellows", "Blacks", "Blues"],
             required: true,
 },
-//         switchLube: {
-//             type: Boolean,
-//             required: true,
-// },
-
     comments: [commentSchema]
-
 })
 
 

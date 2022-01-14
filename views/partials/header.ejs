@@ -10,8 +10,9 @@
 <body>
    <nav>
         <% if (user) { %>
+          <a href="/keyboards/" class="brand-logo left">Homepage</a>
+          <a href="/keyboards/<%= user._id %>" class="brand-logo left">All Keyboards</a>
             <a href="/logout"><i class="material-icons left"></i>Log Out</a>
-            <a href="/keyboards/<%= user._id %>" class="brand-logo left">All Keyboards</a>
         <% } else { %>
             <a href="/auth/google"><i class="material-icons left"></i>Login with Google</a>
         <% } %>

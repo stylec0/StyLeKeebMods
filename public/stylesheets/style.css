@@ -1,8 +1,12 @@
+
+
 * {
   box-sizing: border-box;
   font-family: Helvetica;
   color: #424748;
 }
+
+
 
 body {
   margin: 0;
@@ -89,7 +93,7 @@ nav > a.active {
 }
 
 table {
-  font-size: 15px;
+  font-size: 20px;
 
 }
 
@@ -109,7 +113,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #f7f7f7;
+  background-color: #cac7c7;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -129,17 +133,17 @@ table td {
   font-weight: bold;
 }
 
- #add-review-form {
+ /* #add-review-form {
    display: grid;
    grid-template-columns: auto auto;
    grid-gap: 1rem;
- }
+ } */
 
- #add-review-form input[type="submit"] {
+ /* #add-review-form input[type="submit"] {
    width: 8rem;
    grid-column: 2 / 3;
    margin-bottom: 2rem;
- }
+ } */
 
  ul {
   margin: 0 0 1rem;
@@ -151,15 +155,7 @@ li {
   font-weight: bold;
 }
 
-.btn {
-  color: #0099CC; 
-  background: transparent; 
-  border: 2px solid #0099CC;
-  border-radius: 6px; 
-}
-
-.btn1 {
-  background-color: white;
-  color: black;
-  border: 2px solid #008CBA;
+#images {
+  display: flex;
+  justify-content: flex-start;
 }

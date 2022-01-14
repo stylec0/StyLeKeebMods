@@ -6,14 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>My Keyboards</title>
 </head>
 <body>
+
     <h1>All Keyboard Builds</h1>
+    <br>
+    <section id='images'>
+        <div><img src="https://i.imgur.com/FoeeDPd.jpg" style="width:100%"></div>
+        <div><img src="https://i.imgur.com/wNO6uQ8.jpg" style="width:100%"></div>
+        </section>
+            <br>
+            <br>
     <table id="list">
         <thead>
           <tr>
-            <th>Build Name</th>
+            <th>Keyboard Build</th>
 
           </tr>
         </thead>
@@ -23,18 +32,22 @@
             
             <td><%= k.name %></td>
             
-            <td><a href="/keyboards/<%= k._id %>/edit">Edit/</a></td>
-            <td><a href="/keyboards/<%= k._id %>/details">Details/Comments</a></td>
+            <td><a href="/keyboards/<%= k._id %>/edit">Update</a></td>
+            <td><a href="/keyboards/<%= k._id %>/details">Details</a></td>
             <td><form action="/keyboards/<%= k._id %>?_method=DELETE"
                 class="delete-form" method="POST">
                 <button type="submit">Delete Keyboard</button>
               </form></td>
               
+            
+
           </tr>
     <% }); %>
-    <th><a href="/keyboards/new" class="brand-logo left">Create Custom Keyboard Build</a></th>
+    <th><a href="/keyboards/new" class="brand-logo left">Click here to Start</a></th>
   </tbody>
 </table>
+
+
 
 </body>
 </html>

@@ -9,15 +9,17 @@
     <title>Edit Comments</title>
 </head>
 <body>
-    <h1>Edit your keyboard build</h1>
+    <h1>Edit Comment</h1>
 
-<h2>Comments</h2>
-<form id="add-comment-form" method="POST" action="/keyboards/<%= keyboards._id %>/comments">
-    <label>UserName:
-        <br><br>
-        <input type="text" name="userName">
-        <br><br>
-  <textarea name="content">Add a public comment...</textarea>
-  <br><br>
-  <input type="submit" value="Add Comment">
-</form>
+    <h2>Comments</h2>
+    <form action="/comments/<%= comment._id %>?_method=PUT" method="POST">
+        <!-- Value attribute is being set to the comment's current text -->
+        <input name="text" value="<%= comment.text %>">
+        <button type="submit">UPDATE COMMENT</button>
+      </form>
+            <br><br>
+      <textarea name="content">Add a public comment...</textarea>
+      <br><br>
+      <input type="submit" value="Add Comment">
+    </form>
+    
