@@ -4,8 +4,8 @@ const commentsCtrl = require('../controllers/comments');
 
 
 
-router.post('/keyboards/:id/details', commentsCtrl.create);
-router.delete('/details/:id', commentsCtrl.delete);
+router.post('/keyboards/:id/comments', commentsCtrl.create);
+router.delete('/comments/:id', commentsCtrl.delete);
 
 
  

@@ -10,7 +10,7 @@
 </head>
 <body>
     <h1>This is the create keyboard page</h1>
-    <form action="/keyboards/<%= user._id %>" method="POST">
+    <form action="/keyboards" method="POST">
       <label>Keyboard Build Name:
         <input type="text" name="name">
         <br><br>
@@ -60,3 +60,5 @@
 </form>
 </body>
 </html>
+
+<%- include('../partials/footer') %>

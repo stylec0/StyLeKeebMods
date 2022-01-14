@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
 
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
-app.use('/', keyboardsRoutes);
+app.use('/keyboards', keyboardsRoutes);
 app.use('/', commentsRoutes);
 
 
