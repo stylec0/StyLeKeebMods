@@ -23,7 +23,12 @@
     <% keyboards.forEach(function(k) { %>
         <tr>
             <td><%= k.name %></td>
-            <td><a href="/keyboards/<%= k._id %>/details">Details/Edit/Comments</a></td>
+            <td><a href="/keyboards/<%= k._id %>/edit">Edit/</a></td>
+            <td><a href="/keyboards/<%= k._id %>/details">Details/Comments</a></td>
+            <td><form action="/keyboards/<%= k._id %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">Delete Keyboard Build</button>
+              </form></td>
           </tr>
     <% }); %>
   </tbody>

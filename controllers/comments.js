@@ -3,6 +3,7 @@ const Keyboard = require('../models/keyboard');
 module.exports = {
 	create,
     delete: deleteComment,
+    edit,
 };
 
 function create(req, res){
@@ -11,7 +12,8 @@ function create(req, res){
 	console.log(req.body, " req.body aka the contents of the form")
 
 	Keyboard.findById(req.params.id, function(err, keyboardDocument){
-        req.body.userId = req.user._id;
+        req.body.userId = keyboardDocument.user;
+        // req.body.userId = req.user._id;
         // req.body.userName = req.user.name;
 		
 		keyboardDocument.comments.push(req.body);
@@ -59,4 +61,7 @@ function deleteComment(req, res) {
     );
   }
 
-
+function edit(req, res) {
+    console.log("Controller/comments, edit function")
+    res.render ('keyboards/new',);
+}

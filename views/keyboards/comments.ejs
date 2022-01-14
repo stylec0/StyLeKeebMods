@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Comments</title>
+</head>
+<body>
+    <h1>This is the Edit Comments Page</h1>
+
+<h2>Comments</h2>
+<form id="add-comment-form" method="POST" action="/keyboards/<%= keyboards._id %>/comments">
+    <label>UserName:
+        <br><br>
+        <input type="text" name="userName">
+        <br><br>
+  <textarea name="content">Add a public comment...</textarea>
+  <br><br>
+  <input type="submit" value="Add Comment">
+</form>

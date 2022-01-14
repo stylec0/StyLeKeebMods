@@ -12,7 +12,9 @@ router.get('/new', keyboardsCtrl.new); ///<---create keyboard button
 router.get('/:id', keyboardsCtrl.show);
 router.post('/', keyboardsCtrl.create); /// <---add keyboard button in create
 router.get('/:id/details', keyboardsCtrl.edit); // <--Edit button function
-
+router.delete('/:id', keyboardsCtrl.delete);
+router.get('/:id/edit', keyboardsCtrl.editForm);
+router.put('/:id', keyboardsCtrl.update);
 
 
 // router.post('/:id/keyboards/details', commentsCtrl.create); //<-- add comment button
