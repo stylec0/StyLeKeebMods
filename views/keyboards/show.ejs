@@ -9,28 +9,30 @@
     <title>My Keyboards</title>
 </head>
 <body>
-    <h1>This is the keyboards page</h1>
+    <h1>All Keyboard Builds</h1>
     <table id="list">
         <thead>
           <tr>
             <th>Build Name</th>
-            <th>Details</th>
-            <th><a href="/keyboards/new" class="brand-logo left">Create Custom Keyboard</a></th>
-            <th></th>
+
           </tr>
         </thead>
         <tbody>
     <% keyboards.forEach(function(k) { %>
         <tr>
+            
             <td><%= k.name %></td>
+            
             <td><a href="/keyboards/<%= k._id %>/edit">Edit/</a></td>
             <td><a href="/keyboards/<%= k._id %>/details">Details/Comments</a></td>
             <td><form action="/keyboards/<%= k._id %>?_method=DELETE"
                 class="delete-form" method="POST">
-                <button type="submit">Delete Keyboard Build</button>
+                <button type="submit">Delete Keyboard</button>
               </form></td>
+              
           </tr>
     <% }); %>
+    <th><a href="/keyboards/new" class="brand-logo left">Create Custom Keyboard Build</a></th>
   </tbody>
 </table>
 

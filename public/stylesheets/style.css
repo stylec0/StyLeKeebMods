@@ -42,6 +42,7 @@ nav > img {
 body > main {
   grid-area: main;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   background-color: #f1f1f1;
@@ -88,7 +89,8 @@ nav > a.active {
 }
 
 table {
-  font-size: 20px;
+  font-size: 15px;
+
 }
 
 table thead th {
@@ -97,7 +99,7 @@ table thead th {
 }
 
 table td {
-  padding: 10px;
+  /* padding: 5px; */
   text-align: center;
 }
 
@@ -107,7 +109,7 @@ table td {
 
 #list a {
   border-radius: 4px;
-  background-color: #2290ac;
+  background-color: #f7f7f7;
   padding: 4px;
   text-decoration: none;
   font-size: 14px;
@@ -147,4 +149,17 @@ table td {
 	
 li {
   font-weight: bold;
+}
+
+.btn {
+  color: #0099CC; 
+  background: transparent; 
+  border: 2px solid #0099CC;
+  border-radius: 6px; 
+}
+
+.btn1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
 }
