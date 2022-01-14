@@ -32,7 +32,6 @@ module.exports = {
         res.render('keyboards/show', {
              title: 'Test function show', 
              keyboards: keyboardDocument });
-            // Users: keyboardDocuments,
        
           
         })
