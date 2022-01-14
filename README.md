@@ -4,9 +4,11 @@ How much time a day do you spend typing on a keyboard? Do you ever think your ty
 
 Like PC part picker, this app is meant to help users draft out their planned custom keyboard builds before they commit on the parts. Users can also comment on all the keyboard builds and offer their suggestions. 
 
-<img src="https://i.imgur.com/YMwes0H.jpg">
+<img src="https://i.imgur.com/6LsBjJA.jpg">
 
-<img src="https://i.imgur.com/atgZSch.png">
+<img src="https://i.imgur.com/ewsBeWX.jpg">
+
+<img src="https://i.imgur.com/fxCPt4Q.jpg">
 
 Technologies Used: 
 - JavaScript
