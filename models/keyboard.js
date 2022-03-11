@@ -1,6 +1,6 @@
 const mongoose = require('mongoose'); 
 
-const commentSchema = new mongoose.Schema ({
+const commentSchema = new mongoose.Schema ({ ////< --Embedded
     userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     userName: {
         type: String,
@@ -24,17 +24,17 @@ const keyboardSchema = new mongoose.Schema ({
 },
         keyboardModel: {
             type: String,
-            enum: ["Tofu", "NovelKeys", "Drop", "Epomaker"],
+            enum: ["Tofu", "NovelKeys", "Drop", "Epomaker", "GMMK", "Keychron", "KDBFans", "FreeBird", "GamaKay"],
             required: true,
 },
         switchType: {
             type: String,
-            enum: ["Cherry MX", "Gateron", "Kailh"],
+            enum: ["Cherry MX", "Gateron", "Kailh", "Durock"],
             required: true,
 },
         switchColor: {
             type: String,
-            enum: ["Reds", "Yellows", "Blacks", "Blues"],
+            enum: ["Reds", "Yellows", "Blacks", "Blues", "Silvers"],
             required: true,
 },
     comments: [commentSchema]

@@ -13,15 +13,35 @@ function create(req, res){
 	console.log(req.body, " req.body aka the contents of the form")
 
 	Keyboard.findById(req.params.id, function(err, keyboardDocument){
-        req.body.userId = keyboardDocument.user;
+        req.body.userId = req.user._id
+        //req.body.userId = keyboardDocument.user;
 		keyboardDocument.comments.push(req.body);
 		console.log(keyboardDocument, " <- this is KeyboardDocument, in create comments CTRL")
 		keyboardDocument.save(function(err){
-            console.log(keyboardDocument.comments._id, "<--this is the comments id")
+            console.log(keyboardDocument.comments[0]._id, "<--this is the comments id")
             res.redirect(`/keyboards/${keyboardDocument._id}/details`)
 		})
     })
 }
+
+//function deleteComment(req, res) {
+  
+//  Keyboard.findOne(
+//    {'comments._id': req.params.id,'comments.userId': req.user._id},
+//    function(err, keyboard) {
+//        console.log(keyboard.comments.userId, req.user._id, "keyboard delete comment")
+//      if (!keyboard || err) {
+//        console.log("We received an error", err);
+//        return res.redirect(`/keyboards/${keyboard._id}`);
+//        console.log("For some reason we are reaching this?");
+//      }
+//      keyboard.comments.pull(req.params.id);
+//      keyboard.save(function(err) {
+//        res.redirect(`/keyboards/${keyboard._id}/details`);
+//      });
+//    }
+//  );
+//}
 
 function deleteComment(req, res) {
   
@@ -33,7 +53,7 @@ function deleteComment(req, res) {
         keyboard.comments.pull(req.params.id);
         keyboard.save(function(err) {
           res.redirect(`/keyboards/${keyboard._id}/details`);
-        });
+        }); 
       }
     );
   }

@@ -2,64 +2,72 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Page</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Update your Keyboard Build</h1>
-  
 
     <form action="/keyboards/<%= keyboard._id %>?_method=PUT" method="POST">
-      <label>Keyboard Build Name:
-        <input type="text" name="name">
-        <br><br>
-        
+      <label
+        >Keyboard Build Name:
+        <input type="text" name="name" />
+        <br /><br />
 
-        <label>Keyboard Size:
-            <select name="size"> 
+        <label
+          >Keyboard Size:
+          <select name="size">
             <option value="40%">40%</option>
             <option value="60-65%">60-65%</option>
             <option value="75%">75%</option>
             <option value="TKL(80%)">TKL(80%)</option>
             <option value="100%">100%</option>
-          </select> 
-          </label><br><br>
-          <label>Keyboard Model:
-            <select name="keyboardModel">
+          </select> </label
+        ><br /><br />
+        <label
+          >Keyboard Model:
+          <select name="keyboardModel">
             <option value="Tofu">Tofu</option>
             <option value="NovelKeys">Novel Keys</option>
             <option value="Drop">Drop</option>
             <option value="Epomaker">Epomaker</option>
-          </select> 
-          </label><br>
-          <br>
-        </label>
-        <label>Switch Type:
-          <select name="switchType">
+            <option value="GMMK">GMMK</option>
+            <option value="Keychron">Keychron</option>
+            <option value="KDBFans">KDBFans</option>
+            <option value="FreeBird">FreeBird</option>
+            <option value="GamaKay">GamaKay</option>
+          </select> </label
+        ><br />
+        <br />
+      </label>
+      <label
+        >Switch Type:
+        <select name="switchType">
           <option value="Cherry MX">Cherry MX</option>
           <option value="Gateron">Gateron</option>
           <option value="Kailh">Kailh</option>
-        </select> 
-        </label><br>
-        <br>
-        <label>Switch Color:
-            <select name="switchColor">
-            <option value="Reds">Reds</option>
-            <option value="Yellows">Yellows</option>
-            <option value="Blacks">Blacks</option>
-            <option value="Blues">Blues</option>
-          </select> 
-          </label><br>
-          <br>
-          <!-- <label>Would you like to add Switch Lube Service?</label>
-  <input type="checkbox" name="switchLube" checked> -->
-    
-  <input type="submit" value="Update">
-</form>
-</body>
+          <option value="Durock">Durock</option>
+        </select> </label
+      ><br />
+      <br />
+      <label
+        >Switch Color:
+        <select name="switchColor">
+          <option value="Reds">Reds</option>
+          <option value="Yellows">Yellows</option>
+          <option value="Blacks">Blacks</option>
+          <option value="Blues">Blues</option>
+          <option value="Silvers">Silvers</option>
+        </select> </label
+      ><br />
+      <br />
+
+      <input type="submit" value="Update" />
+    </form>
+  </body>
 </html>
 
 <%- include('../partials/footer') %>
