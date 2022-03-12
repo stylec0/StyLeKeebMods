@@ -81,6 +81,7 @@
         </tr>
 </thead>
 </table>
+
 <h2>Comments</h2>
 <form id="add-comment-form" method="POST" action="/keyboards/<%= keyboards._id %>/comments">
     <label>UserName:
@@ -102,16 +103,25 @@
         </tr>
       </thead>
       <tbody>
+          
         <% keyboards.comments.forEach(function(c) { %>
+            
           <tr>
             <td><%= c.userName %></td>
             <td><%= c.createdAt.toLocaleDateString() %></td>
             <td><%= c.content %></td>
+            <td><%= console.log((c.userId.toString())) %></td>
+            
+            <% if(user) { %> 
+                <% if (c.userId.toString() === user._id.toString() ){ %> 
             <td><form action="/comments/<%= c._id %>?_method=DELETE"
         class="delete-form" method="POST">
         <button type="submit">Delete Comment</button>
+        
       </form></td>
           </tr>
+          <% } %> 
+          <% } %> 
         <% }); %>
         <tr>
         </tr>

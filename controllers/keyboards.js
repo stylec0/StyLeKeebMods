@@ -73,7 +73,7 @@ function deleteKeyboard(req, res) {
   }
 
 function edit(req,res) {
-    console.log("Controller/Keyboards, edit function",)
+    console.log(req.params.id, "<---Controller/Keyboards, edit function",)
     Keyboard.findById(req.params.id, function(err, keyboardDocument){
         console.log(keyboardDocument, "<---this is KeyboardDocument in Edit")
         res.render('keyboards/details', {
