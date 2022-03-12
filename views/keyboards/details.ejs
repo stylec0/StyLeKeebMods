@@ -112,7 +112,7 @@
             <td><%= c.content %></td>
             
             <% if(user) { %> 
-                <% if (JSON.stringify( c.userId) === JSON.stringify(user._id )){ %> 
+                <% if ( c.userId.equals(user._id )){ %> 
             <td><form action="/comments/<%= c._id %>?_method=DELETE"
         class="delete-form" method="POST">
         <button type="submit">Delete Comment</button>
